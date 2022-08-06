@@ -16,7 +16,7 @@ const MovieList = () => {
 
   return (
     <div>
-        {}
+        hello
     </div>
   )
 }
