@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: "https://api.themoviedb.org/3/movie/550?api_key=a043c9e18bae26b0aa2e36b5618fba7d"
+    baseURL: "https://api.themoviedb.org/3/movie/550"
 }) 
 
 // const axiosClient = axios.create({
@@ -11,3 +11,6 @@ export const api = axios.create({
 //       'Content-Type': 'application/json'
 //     }
 //   });
+
+
+
