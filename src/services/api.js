@@ -1,8 +1,10 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: "https://api.themoviedb.org/3/movie/550"
+    baseURL: "http://www.omdbapi.com/"
 }) 
+
+
 
 // const axiosClient = axios.create({
 //     baseURL: `https://api.example.com`,

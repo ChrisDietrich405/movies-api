@@ -1,12 +1,14 @@
 import React from 'react'
+import styles from "./styles.module.css"
 
 const Movie = ({movies}) => {
   return (
-   <div>
-    {movies.map((movie, index) => {
+   <div className={styles.movie_container}>
+   
+    {movies && movies.map((movie, index) => {
         return (
-            <div key={index}>
-                <h4>{movie.Title}</h4>
+            <div className={styles.individual_movie_container} key={index}>
+                <p>{movie.Title}</p>
                 <img src={movie.Poster} alt="movie poster" />
             </div>
         )

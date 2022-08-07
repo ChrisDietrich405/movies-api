@@ -4,29 +4,39 @@ import axios from "axios";
 import { api } from "../services/api";
 import Movie from "../Movie";
 
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
+import SearchMovie from "../SearchMovie";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
   const [searchMovie, setSearchMovie] = useState([]);
 
   const fetchMovies = async () => {
-    const url = "http://www.omdbapi.com/?s=star wars&apikey=b7791e02";
-    const response = await fetch(url);
-    const responseJson = await response.json();
-    console.log(responseJson.Search);
-    setMovies(responseJson.Search);
+    const response = await api.get(
+      `?s=${searchMovie}&apikey=${process.env.REACT_APP_API_KEY}`
+    );
+    
+    setMovies(response.data.Search);
   };
 
   useEffect(() => {
-    fetchMovies();
+    fetchMovies(searchMovie);
   }, []);
 
   return (
     <div className={styles.movie_container}>
+      <SearchMovie fetchMovies={fetchMovies} searchMovie={searchMovie} setSearchMovie={setSearchMovie} />
       <Movie movies={movies} />
     </div>
   );
 };
 
 export default MovieList;
+
+// useEffect(() => {
+//   fetchMovies(searchMovie);
+// }, [searchMovie]);
+
+// };
+
+// export default MovieList;
