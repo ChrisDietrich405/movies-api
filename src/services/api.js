@@ -6,13 +6,6 @@ export const api = axios.create({
 
 
 
-// const axiosClient = axios.create({
-//     baseURL: `https://api.example.com`,
-//     headers: {
-//       'Accept': 'application/json',
-//       'Content-Type': 'application/json'
-//     }
-//   });
 
 
 

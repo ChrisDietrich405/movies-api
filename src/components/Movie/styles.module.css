@@ -1,0 +1,37 @@
+.movie_container {
+    margin: 30px auto;   
+    height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem; 
+}
+
+.movie_container h1 {
+    font-size: 50px; 
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+
+.movie_container ul {
+    display: flex; 
+    flex-wrap: wrap;    
+}
+
+.movie_container li {
+    margin: 8px 10px; 
+    padding: 8px; 
+    border: 1px solid black; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+
+
+
+.movie_container li p {
+    margin-top: 8px; 
+}
+
+.individual_movie_container {
+    width: 150px; 
+}

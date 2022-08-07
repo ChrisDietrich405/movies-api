@@ -1,8 +1,10 @@
 import React from 'react'
 
-const SearchMovie = ({searchMovie, setSearchMovie, fetchMovies}) => {
+import styles from "./styles.module.css"
+const Header = ({searchMovie, setSearchMovie, fetchMovies}) => {
   return (
-    <div>
+    <div className={styles.header_container}>
+        <img src="" alt="" />
         <input type="text" value={searchMovie}
         onChange={(e) => setSearchMovie(e.target.value)} />
         <button onClick={fetchMovies}>search movie</button>
@@ -10,4 +12,4 @@ const SearchMovie = ({searchMovie, setSearchMovie, fetchMovies}) => {
   )
 }
 
-export default SearchMovie
+export default Header

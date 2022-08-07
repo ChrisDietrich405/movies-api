@@ -1,8 +1,7 @@
 .movie_container {
-    background: purple; 
     max-width: 1200px;  
     height: 100vh; 
     margin: 0 auto; 
     display: flex;
-    flex-wrap: wrap; 
+    flex-direction: column; 
 }
